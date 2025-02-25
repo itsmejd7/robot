@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Mini App</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #0088cc;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello, Telegram!</h1>
+    <button onclick="sendMessage()">Send Message</button>
+
+    <script>
+        let tg = window.Telegram.WebApp;
+        tg.expand();  // Expands to full screen
+
+        function sendMessage() {
+            tg.showAlert("Hello from your Mini App!");
+        }
+    </script>
+</body>
+</html>
